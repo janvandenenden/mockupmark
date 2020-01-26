@@ -1,0 +1,92 @@
+nav {
+  background-color: #fff; }
+  nav a {
+    color: #000; }
+
+#hero {
+  background: linear-gradient(45deg, rgba(252, 85, 229, 0.7), rgba(33, 47, 248, 0.6));
+  color: #FFF;
+  text-shadow: 1px 1px 2px #747272;
+  min-height: calc(100vh - 56px);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 0px; }
+  #hero #hero-content {
+    height: 100%;
+    align-items: center; }
+    #hero #hero-content #hero-text {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      justify-content: center; }
+      #hero #hero-content #hero-text h1 {
+        font-size: 56px;
+        font-weight: bolder;
+        padding: 2rem 0; }
+    #hero #hero-content #hero-image {
+      height: 100%;
+      overflow: hidden; }
+      #hero #hero-content #hero-image #carousel {
+        overflow: hidden; }
+        #hero #hero-content #hero-image #carousel img {
+          max-width: 80%;
+          margin: 0 auto; }
+
+#how-to, #everything-you-need {
+  margin: 4rem 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: center; }
+  #how-to #how-to-content, #how-to #everything-you-need-content, #everything-you-need #how-to-content, #everything-you-need #everything-you-need-content {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+    #how-to #how-to-content h1, #how-to #everything-you-need-content h1, #everything-you-need #how-to-content h1, #everything-you-need #everything-you-need-content h1 {
+      font-size: 56px;
+      font-weight: bolder;
+      padding: 2rem 0; }
+    #how-to #how-to-content .card, #how-to #everything-you-need-content .card, #everything-you-need #how-to-content .card, #everything-you-need #everything-you-need-content .card {
+      margin: 32px 0;
+      padding: 2rem 0; }
+      #how-to #how-to-content .card img, #how-to #everything-you-need-content .card img, #everything-you-need #how-to-content .card img, #everything-you-need #everything-you-need-content .card img {
+        margin: 0 auto; }
+      #how-to #how-to-content .card p, #how-to #everything-you-need-content .card p, #everything-you-need #how-to-content .card p, #everything-you-need #everything-you-need-content .card p {
+        text-align: center; }
+
+#why-use {
+  background-color: black;
+  min-height: calc(100vh - 56px);
+  height: 100%; }
+  #why-use:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to bottom, rgba(230, 89, 206, 0.62), rgba(221, 72, 160, 0.73)), url("./img/carousel1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: blur(5px) grayscale(100%);
+    transform: scale(1); }
+  #why-use #why-use-content {
+    position: relative;
+    height: 100vh; }
+    #why-use #why-use-content .container {
+      height: 100%; }
+      #why-use #why-use-content .container .row {
+        height: 100%;
+        display: flex;
+        align-items: center; }
+        #why-use #why-use-content .container .row h1 {
+          font-size: 3.5rem;
+          font-weight: bolder;
+          padding: 2rem 0;
+          color: #fff; }
+        #why-use #why-use-content .container .row p {
+          font-size: 1.5rem;
+          color: #fff; }
+
+/*# sourceMappingURL=main.css.map */
