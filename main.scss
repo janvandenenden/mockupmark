@@ -1,5 +1,7 @@
 $primary-color:rgb(147, 237, 199);
 $secondary-color:rgb(235, 74, 74);
+$white:#FFFFFA;
+$black:#000103;
 $primary-font:arial;
 $secondary-font:serif;
 
@@ -8,9 +10,12 @@ $breakpoint-medium:768px;
 $breakpoint-large:992px;
 $breakpoint-x-large:1200px;
 
+body{
+  background-color: $white;
+}
 
 nav {
-  background-color: #fff;
+  background-color: #FFFFFA;
   a {
     color: #000;
   }
@@ -19,11 +24,11 @@ nav {
   background: linear-gradient(
     90deg,
     rgba(28, 216, 210, 0.62),
-        rgba(147, 237, 199, 0.73)
+        $primary-color
   );
   clip-path: polygon(0 0, 100% 0, 100% 84%, 0 100%);
-  color: #fff;
-  text-shadow: 1px 1px rgb(235, 74, 74);
+  color: $white;
+  text-shadow: 1px 1px $secondary-color;
   min-height: calc(100vh - 56px);
   height: 100%;
   display: flex;
@@ -47,19 +52,22 @@ nav {
       button{
         width:100%;
         background-color: $secondary-color;
-        color:#fff;
+        color:$white;
         border:1px solid $secondary-color;
         box-shadow: 1px 1px 3px black;
         font-weight: bolder;
+        border-radius: 0;
       }
       input{
         border:none;
         box-shadow: 1px 1px 3px black;
-        color:$secondary-color;
+        color:darkgray;
         font-weight: thin;
+        border-radius: 0;
+        background-color: $white;
         &::placeholder{
-          color:$secondary-color;
           font-weight: thin;
+          color:darkgray;
         }
       }
     }
@@ -103,20 +111,14 @@ nav {
       font-size: 56px;
       font-weight: bolder;
       padding: 2rem 0;
-      color:$primary-color;
-      text-shadow: 1px 1px $secondary-color;
+      color:black;
     }
     .card {
       margin: 32px 0;
       padding: 2rem 0;
-      border:1px solid $primary-color;
-      background:linear-gradient(
-        90deg,
-        rgba(28, 216, 210, 0.62),
-            rgba(147, 237, 199, 0.73)
-      );
+      border:3px solid $primary-color;
       box-shadow: 1px 2px 8px black;
-      color:#FFF;
+      color:black;
       border-radius: 0;
       img {
         margin: 0 auto;
@@ -133,7 +135,7 @@ nav {
   background: linear-gradient(
     90deg,
     rgba(28, 216, 210, 0.62),
-        rgba(147, 237, 199, 0.73)
+        $primary-color
   );
   min-height: calc(100vh - 56px);
   height: 100%;
@@ -146,29 +148,37 @@ nav {
         height: 100%;
         display: flex;
         align-items: center;
+        #carousel-container{
+          @media (max-width: $breakpoint-large) {
+            display: none;
+            visibility: hidden;
+          }
+        }
         #carousel2 {
           overflow: hidden;
           width:80%;
           margin:0 auto;
-          box-shadow: 5px 5px 20px black ;
-  
+          box-shadow: 5px 5px 20px black;
+          
           img {
             max-width: 100%;
             margin: 0 auto;
           }
         }
+        
         h1 {
           font-weight: bolder;
-          text-shadow: 1px 1px rgb(235, 74, 74);
-
+          text-shadow: 1px 1px $secondary-color;
+          text-align: center;
           padding: 2rem 0;
-          color: #fff;
+          color: $white;
           @media (max-width: $breakpoint-medium) {
             font-size: 2rem;
           }
         }
         p {
-          color: #fff;
+          color: $white;
+          text-align: center;
           @media (max-width: $breakpoint-medium) {
             font-size: 1rem;
           }
@@ -184,7 +194,7 @@ footer {
   background:linear-gradient(
     90deg,
     rgba(28, 216, 210, 0.62),
-        rgba(147, 237, 199, 0.73)
+        $primary-color
   );
   display:flex;
   flex-direction: column;
@@ -196,8 +206,12 @@ footer {
     display:flex;
     justify-content: space-evenly;
     i {
-      color:#fff;
+      color:$white;
       font-size:2rem;
     }
+  }
+  p{
+    font-size: 0.7rem;
+    font-weight: thin;
   }
 }

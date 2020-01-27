@@ -1,12 +1,15 @@
+body {
+  background-color: #FFFFFA; }
+
 nav {
-  background-color: #fff; }
+  background-color: #FFFFFA; }
   nav a {
     color: #000; }
 
 #hero {
-  background: linear-gradient(90deg, rgba(28, 216, 210, 0.62), rgba(147, 237, 199, 0.73));
+  background: linear-gradient(90deg, rgba(28, 216, 210, 0.62), #93edc7);
   clip-path: polygon(0 0, 100% 0, 100% 84%, 0 100%);
-  color: #fff;
+  color: #FFFFFA;
   text-shadow: 1px 1px #eb4a4a;
   min-height: calc(100vh - 56px);
   height: 100%;
@@ -29,18 +32,21 @@ nav {
       #hero #hero-content #hero-text button {
         width: 100%;
         background-color: #eb4a4a;
-        color: #fff;
+        color: #FFFFFA;
         border: 1px solid #eb4a4a;
         box-shadow: 1px 1px 3px black;
-        font-weight: bolder; }
+        font-weight: bolder;
+        border-radius: 0; }
       #hero #hero-content #hero-text input {
         border: none;
         box-shadow: 1px 1px 3px black;
-        color: #eb4a4a;
-        font-weight: thin; }
+        color: darkgray;
+        font-weight: thin;
+        border-radius: 0;
+        background-color: #FFFFFA; }
         #hero #hero-content #hero-text input::placeholder {
-          color: #eb4a4a;
-          font-weight: thin; }
+          font-weight: thin;
+          color: darkgray; }
     #hero #hero-content #hero-image {
       height: 30rem;
       padding: 0;
@@ -80,18 +86,16 @@ nav {
       font-size: 56px;
       font-weight: bolder;
       padding: 2rem 0;
-      color: #93edc7;
-      text-shadow: 1px 1px #eb4a4a; }
+      color: black; }
     #how-to #how-to-content .card,
     #how-to #everything-you-need-content .card,
     #everything-you-need #how-to-content .card,
     #everything-you-need #everything-you-need-content .card {
       margin: 32px 0;
       padding: 2rem 0;
-      border: 1px solid #93edc7;
-      background: linear-gradient(90deg, rgba(28, 216, 210, 0.62), rgba(147, 237, 199, 0.73));
+      border: 3px solid #93edc7;
       box-shadow: 1px 2px 8px black;
-      color: #FFF;
+      color: black;
       border-radius: 0; }
       #how-to #how-to-content .card img,
       #how-to #everything-you-need-content .card img,
@@ -106,7 +110,7 @@ nav {
 
 #why-use {
   clip-path: polygon(0% 14%, 100% 0, 100% 84%, 0 100%);
-  background: linear-gradient(90deg, rgba(28, 216, 210, 0.62), rgba(147, 237, 199, 0.73));
+  background: linear-gradient(90deg, rgba(28, 216, 210, 0.62), #93edc7);
   min-height: calc(100vh - 56px);
   height: 100%; }
   #why-use #why-use-content {
@@ -118,6 +122,10 @@ nav {
         height: 100%;
         display: flex;
         align-items: center; }
+        @media (max-width: 992px) {
+          #why-use #why-use-content .container .row #carousel-container {
+            display: none;
+            visibility: hidden; } }
         #why-use #why-use-content .container .row #carousel2 {
           overflow: hidden;
           width: 80%;
@@ -129,13 +137,15 @@ nav {
         #why-use #why-use-content .container .row h1 {
           font-weight: bolder;
           text-shadow: 1px 1px #eb4a4a;
+          text-align: center;
           padding: 2rem 0;
-          color: #fff; }
+          color: #FFFFFA; }
           @media (max-width: 768px) {
             #why-use #why-use-content .container .row h1 {
               font-size: 2rem; } }
         #why-use #why-use-content .container .row p {
-          color: #fff; }
+          color: #FFFFFA;
+          text-align: center; }
           @media (max-width: 768px) {
             #why-use #why-use-content .container .row p {
               font-size: 1rem; } }
@@ -143,7 +153,7 @@ nav {
 footer {
   padding: 1rem 0;
   height: 100%;
-  background: linear-gradient(90deg, rgba(28, 216, 210, 0.62), rgba(147, 237, 199, 0.73));
+  background: linear-gradient(90deg, rgba(28, 216, 210, 0.62), #93edc7);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -153,7 +163,10 @@ footer {
     display: flex;
     justify-content: space-evenly; }
     footer .soc-media i {
-      color: #fff;
+      color: #FFFFFA;
       font-size: 2rem; }
+  footer p {
+    font-size: 0.7rem;
+    font-weight: thin; }
 
 /*# sourceMappingURL=main.css.map */
