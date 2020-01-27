@@ -1,3 +1,14 @@
+$primary-color:rgb(147, 237, 199);
+$secondary-color:rgb(235, 74, 74);
+$primary-font:arial;
+$secondary-font:serif;
+
+$breakpoint-small:576px;
+$breakpoint-medium:768px;
+$breakpoint-large:992px;
+$breakpoint-x-large:1200px;
+
+
 nav {
   background-color: #fff;
   a {
@@ -5,9 +16,14 @@ nav {
   }
 }
 #hero {
-    background:linear-gradient(45deg, rgba(252, 85, 229, 0.7), rgba(33, 47, 248, 0.6));
-    color:#FFF;
-    text-shadow: 1px 1px 2px rgb(116, 114, 114);
+  background: linear-gradient(
+    90deg,
+    rgba(28, 216, 210, 0.62),
+        rgba(147, 237, 199, 0.73)
+  );
+  clip-path: polygon(0 0, 100% 0, 100% 84%, 0 100%);
+  color: #fff;
+  text-shadow: 1px 1px rgb(235, 74, 74);
   min-height: calc(100vh - 56px);
   height: 100%;
   display: flex;
@@ -28,14 +44,41 @@ nav {
         font-weight: bolder;
         padding: 2rem 0;
       }
+      button{
+        width:100%;
+        background-color: $secondary-color;
+        color:#fff;
+        border:1px solid $secondary-color;
+        box-shadow: 1px 1px 3px black;
+        font-weight: bolder;
+      }
+      input{
+        border:none;
+        box-shadow: 1px 1px 3px black;
+        color:$secondary-color;
+        font-weight: thin;
+        &::placeholder{
+          color:$secondary-color;
+          font-weight: thin;
+        }
+      }
     }
     #hero-image {
-      height: 100%;
+      height: 30rem;
+      padding:0;
       overflow: hidden;
+      background-image: url('./img/hero2.png');
+      background-size: contain;
+      background-position: center center;
+      background-repeat: no-repeat;
       #carousel {
         overflow: hidden;
+        width:80%;
+        margin:0 auto;
+        box-shadow: 5px 5px 20px black ;
+
         img {
-          max-width: 80%;
+          max-width: 100%;
           margin: 0 auto;
         }
       }
@@ -43,13 +86,15 @@ nav {
   }
 }
 
-#how-to, #everything-you-need {
+#how-to,
+#everything-you-need {
   margin: 4rem 0;
   height: 100%;
   display: flex;
   flex-direction: column;
   text-align: center;
-  #how-to-content, #everything-you-need-content {
+  #how-to-content,
+  #everything-you-need-content {
     min-height: 100%;
     display: flex;
     flex-direction: column;
@@ -58,10 +103,21 @@ nav {
       font-size: 56px;
       font-weight: bolder;
       padding: 2rem 0;
+      color:$primary-color;
+      text-shadow: 1px 1px $secondary-color;
     }
     .card {
       margin: 32px 0;
       padding: 2rem 0;
+      border:1px solid $primary-color;
+      background:linear-gradient(
+        90deg,
+        rgba(28, 216, 210, 0.62),
+            rgba(147, 237, 199, 0.73)
+      );
+      box-shadow: 1px 2px 8px black;
+      color:#FFF;
+      border-radius: 0;
       img {
         margin: 0 auto;
       }
@@ -73,26 +129,14 @@ nav {
 }
 
 #why-use {
-  background-color: rgba(0, 0, 0, 1);
+  clip-path: polygon(0% 14%, 100% 0, 100% 84%, 0 100%);
+  background: linear-gradient(
+    90deg,
+    rgba(28, 216, 210, 0.62),
+        rgba(147, 237, 199, 0.73)
+  );
   min-height: calc(100vh - 56px);
   height: 100%;
-  &:before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-image: linear-gradient(
-        to bottom,
-        rgba(230, 89, 206, 0.62),
-        rgba(221,72,160, 0.73)
-      ),
-      url("./img/carousel1.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    filter:blur(5px) grayscale(100%);
-    transform: scale(1)
-
-  }
   #why-use-content {
     position: relative;
     height: 100vh;
@@ -102,17 +146,58 @@ nav {
         height: 100%;
         display: flex;
         align-items: center;
+        #carousel2 {
+          overflow: hidden;
+          width:80%;
+          margin:0 auto;
+          box-shadow: 5px 5px 20px black ;
+  
+          img {
+            max-width: 100%;
+            margin: 0 auto;
+          }
+        }
         h1 {
-          font-size: 3.5rem;
           font-weight: bolder;
+          text-shadow: 1px 1px rgb(235, 74, 74);
+
           padding: 2rem 0;
           color: #fff;
+          @media (max-width: $breakpoint-medium) {
+            font-size: 2rem;
+          }
         }
-        p{
-            font-size: 1.5rem;
-            color: #fff;
+        p {
+          color: #fff;
+          @media (max-width: $breakpoint-medium) {
+            font-size: 1rem;
+          }
         }
       }
+    }
+  }
+}
+
+footer {
+  padding:1rem 0;
+  height:100%;
+  background:linear-gradient(
+    90deg,
+    rgba(28, 216, 210, 0.62),
+        rgba(147, 237, 199, 0.73)
+  );
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  ;
+  .soc-media{
+    padding:1rem 0;
+    display:flex;
+    justify-content: space-evenly;
+    i {
+      color:#fff;
+      font-size:2rem;
     }
   }
 }
