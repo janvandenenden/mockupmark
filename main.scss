@@ -188,24 +188,33 @@ nav {
             margin: 0 auto;
           }
         }
+        #carousel-info{
+          min-height: 320px;
+          .info-item{
+            display: flex;
+          }
+          h1 {
+            font-weight: bolder;
+            text-shadow: 1px 1px $secondary-color;
+            text-align: center;
+            padding: 2rem 0;
+            color: $white;
+            margin:0;
+            @media (max-width: $breakpoint-medium) {
+              font-size: 2rem;
+            }
+          }
+          p {
+            color: $white;
+            margin:0;
+            text-align: center;
+            @media (max-width: $breakpoint-medium) {
+              font-size: 1rem;
+            }
+          }
 
-        h1 {
-          font-weight: bolder;
-          text-shadow: 1px 1px $secondary-color;
-          text-align: center;
-          padding: 2rem 0;
-          color: $white;
-          @media (max-width: $breakpoint-medium) {
-            font-size: 2rem;
-          }
         }
-        p {
-          color: $white;
-          text-align: center;
-          @media (max-width: $breakpoint-medium) {
-            font-size: 1rem;
-          }
-        }
+        
       }
     }
   }

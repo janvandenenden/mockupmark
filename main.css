@@ -161,21 +161,27 @@ nav {
           #why-use #why-use-content .container .row #carousel2 img {
             max-width: 100%;
             margin: 0 auto; }
-        #why-use #why-use-content .container .row h1 {
-          font-weight: bolder;
-          text-shadow: 1px 1px #eb4a4a;
-          text-align: center;
-          padding: 2rem 0;
-          color: #fffffa; }
-          @media (max-width: 768px) {
-            #why-use #why-use-content .container .row h1 {
-              font-size: 2rem; } }
-        #why-use #why-use-content .container .row p {
-          color: #fffffa;
-          text-align: center; }
-          @media (max-width: 768px) {
-            #why-use #why-use-content .container .row p {
-              font-size: 1rem; } }
+        #why-use #why-use-content .container .row #carousel-info {
+          min-height: 320px; }
+          #why-use #why-use-content .container .row #carousel-info .info-item {
+            display: flex; }
+          #why-use #why-use-content .container .row #carousel-info h1 {
+            font-weight: bolder;
+            text-shadow: 1px 1px #eb4a4a;
+            text-align: center;
+            padding: 2rem 0;
+            color: #fffffa;
+            margin: 0; }
+            @media (max-width: 768px) {
+              #why-use #why-use-content .container .row #carousel-info h1 {
+                font-size: 2rem; } }
+          #why-use #why-use-content .container .row #carousel-info p {
+            color: #fffffa;
+            margin: 0;
+            text-align: center; }
+            @media (max-width: 768px) {
+              #why-use #why-use-content .container .row #carousel-info p {
+                font-size: 1rem; } }
 
 footer {
   padding: 1rem 0;
