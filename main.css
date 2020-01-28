@@ -1,15 +1,27 @@
 body {
-  background-color: #FFFFFA; }
+  background-color: #fffffa; }
 
 nav {
-  background-color: #FFFFFA; }
+  background-color: #fffffa; }
+  @media (max-width: 992px) {
+    nav {
+      flex-direction: column; } }
   nav a {
     color: #000; }
+
+.navbar {
+  transition: top 0.3s; }
+
+.scrolled {
+  background: transparent;
+  /* IE */ }
+  .scrolled a {
+    color: transparent; }
 
 #hero {
   background: linear-gradient(90deg, rgba(28, 216, 210, 0.62), #93edc7);
   clip-path: polygon(0 0, 100% 0, 100% 84%, 0 100%);
-  color: #FFFFFA;
+  color: #fffffa;
   text-shadow: 1px 1px #eb4a4a;
   min-height: calc(100vh - 56px);
   height: 100%;
@@ -25,14 +37,31 @@ nav {
       flex-direction: column;
       height: 100%;
       justify-content: center; }
+      @media (max-width: 992px) {
+        #hero #hero-content #hero-text {
+          text-align: center; } }
       #hero #hero-content #hero-text h1 {
         font-size: 56px;
         font-weight: bolder;
         padding: 2rem 0; }
+      #hero #hero-content #hero-text .response {
+        padding: 0 1rem;
+        text-shadow: none;
+        text-transform: uppercase;
+        text-align: center; }
+        #hero #hero-content #hero-text .response a {
+          color: #eb4a4a;
+          text-transform: uppercase; }
+      #hero #hero-content #hero-text #mce-error-response {
+        color: #eb4a4a; }
+        #hero #hero-content #hero-text #mce-error-response a {
+          color: #eb4a4a; }
+      #hero #hero-content #hero-text #mce-success-response {
+        color: #000103; }
       #hero #hero-content #hero-text button {
         width: 100%;
         background-color: #eb4a4a;
-        color: #FFFFFA;
+        color: #fffffa;
         border: 1px solid #eb4a4a;
         box-shadow: 1px 1px 3px black;
         font-weight: bolder;
@@ -43,7 +72,7 @@ nav {
         color: darkgray;
         font-weight: thin;
         border-radius: 0;
-        background-color: #FFFFFA; }
+        background-color: #fffffa; }
         #hero #hero-content #hero-text input::placeholder {
           font-weight: thin;
           color: darkgray; }
@@ -94,7 +123,6 @@ nav {
       margin: 32px 0;
       padding: 2rem 0;
       border: 3px solid #93edc7;
-      box-shadow: 1px 2px 8px black;
       color: black;
       border-radius: 0; }
       #how-to #how-to-content .card img,
@@ -109,26 +137,25 @@ nav {
         text-align: center; }
 
 #why-use {
+  padding: 10rem 0;
   clip-path: polygon(0% 14%, 100% 0, 100% 84%, 0 100%);
   background: linear-gradient(90deg, rgba(28, 216, 210, 0.62), #93edc7);
   min-height: calc(100vh - 56px);
   height: 100%; }
   #why-use #why-use-content {
     position: relative;
-    height: 100vh; }
+    min-height: 100vh;
+    display: flex;
+    align-items: center; }
     #why-use #why-use-content .container {
       height: 100%; }
       #why-use #why-use-content .container .row {
         height: 100%;
         display: flex;
         align-items: center; }
-        @media (max-width: 992px) {
-          #why-use #why-use-content .container .row #carousel-container {
-            display: none;
-            visibility: hidden; } }
         #why-use #why-use-content .container .row #carousel2 {
           overflow: hidden;
-          width: 80%;
+          width: 60%;
           margin: 0 auto;
           box-shadow: 5px 5px 20px black; }
           #why-use #why-use-content .container .row #carousel2 img {
@@ -139,12 +166,12 @@ nav {
           text-shadow: 1px 1px #eb4a4a;
           text-align: center;
           padding: 2rem 0;
-          color: #FFFFFA; }
+          color: #fffffa; }
           @media (max-width: 768px) {
             #why-use #why-use-content .container .row h1 {
               font-size: 2rem; } }
         #why-use #why-use-content .container .row p {
-          color: #FFFFFA;
+          color: #fffffa;
           text-align: center; }
           @media (max-width: 768px) {
             #why-use #why-use-content .container .row p {
@@ -162,9 +189,15 @@ footer {
     padding: 1rem 0;
     display: flex;
     justify-content: space-evenly; }
-    footer .soc-media i {
-      color: #FFFFFA;
+    footer .soc-media .fa-instagram, footer .soc-media .fa-facebook {
+      color: #fffffa;
       font-size: 2rem; }
+    footer .soc-media .fa-instagram:hover {
+      background: -webkit-linear-gradient(#feda75, #d62976);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent; }
+    footer .soc-media .fa-facebook:hover {
+      color: #3B5998; }
   footer p {
     font-size: 0.7rem;
     font-weight: thin; }

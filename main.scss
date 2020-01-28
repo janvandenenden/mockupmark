@@ -1,31 +1,39 @@
-$primary-color:rgb(147, 237, 199);
-$secondary-color:rgb(235, 74, 74);
-$white:#FFFFFA;
-$black:#000103;
-$primary-font:arial;
-$secondary-font:serif;
+$primary-color: rgb(147, 237, 199);
+$secondary-color: rgb(235, 74, 74);
+$white: #fffffa;
+$black: #000103;
+$primary-font: arial;
+$secondary-font: serif;
 
-$breakpoint-small:576px;
-$breakpoint-medium:768px;
-$breakpoint-large:992px;
-$breakpoint-x-large:1200px;
+$breakpoint-small: 576px;
+$breakpoint-medium: 768px;
+$breakpoint-large: 992px;
+$breakpoint-x-large: 1200px;
 
-body{
+body {
   background-color: $white;
 }
 
 nav {
-  background-color: #FFFFFA;
+  background-color: #fffffa;
+  @media (max-width: $breakpoint-large) {
+    flex-direction: column;
+  }
   a {
     color: #000;
   }
 }
+.navbar {
+  transition: top 0.3s;
+}
+.scrolled {
+  background: transparent;
+  a {
+    color: transparent;
+  } /* IE */
+}
 #hero {
-  background: linear-gradient(
-    90deg,
-    rgba(28, 216, 210, 0.62),
-        $primary-color
-  );
+  background: linear-gradient(90deg, rgba(28, 216, 210, 0.62), $primary-color);
   clip-path: polygon(0 0, 100% 0, 100% 84%, 0 100%);
   color: $white;
   text-shadow: 1px 1px $secondary-color;
@@ -44,46 +52,68 @@ nav {
       flex-direction: column;
       height: 100%;
       justify-content: center;
+      @media (max-width: $breakpoint-large) {
+        text-align: center;
+      }
       h1 {
         font-size: 56px;
         font-weight: bolder;
         padding: 2rem 0;
       }
-      button{
-        width:100%;
+      .response {
+        padding:0 1rem;
+        text-shadow: none;
+        text-transform: uppercase;
+        text-align: center;
+        a{
+          color:$secondary-color;
+          text-transform: uppercase;
+        }
+      }
+      #mce-error-response {
+        color:$secondary-color;
+        a {
+          color:$secondary-color;
+        }
+      }
+      #mce-success-response {
+        color:$black;
+      }
+      button {
+        width: 100%;
         background-color: $secondary-color;
-        color:$white;
-        border:1px solid $secondary-color;
+        color: $white;
+        border: 1px solid $secondary-color;
         box-shadow: 1px 1px 3px black;
         font-weight: bolder;
         border-radius: 0;
       }
-      input{
-        border:none;
+      input {
+        border: none;
         box-shadow: 1px 1px 3px black;
-        color:darkgray;
+        color: darkgray;
         font-weight: thin;
         border-radius: 0;
         background-color: $white;
-        &::placeholder{
+        &::placeholder {
           font-weight: thin;
-          color:darkgray;
+          color: darkgray;
         }
       }
     }
     #hero-image {
       height: 30rem;
-      padding:0;
+      padding: 0;
       overflow: hidden;
-      background-image: url('./img/hero2.png');
+      background-image: url("./img/hero2.png");
       background-size: contain;
       background-position: center center;
       background-repeat: no-repeat;
       #carousel {
         overflow: hidden;
-        width:80%;
-        margin:0 auto;
-        box-shadow: 5px 5px 20px black ;
+        width: 80%;
+        margin: 0 auto;
+        box-shadow: 5px 5px 20px black;
 
         img {
           max-width: 100%;
@@ -111,14 +141,14 @@ nav {
       font-size: 56px;
       font-weight: bolder;
       padding: 2rem 0;
-      color:black;
+      color: black;
     }
     .card {
       margin: 32px 0;
       padding: 2rem 0;
-      border:3px solid $primary-color;
-      box-shadow: 1px 2px 8px black;
-      color:black;
+      border: 3px solid $primary-color;
+      // box-shadow: 1px 2px 8px black;
+      color: black;
       border-radius: 0;
       img {
         margin: 0 auto;
@@ -131,41 +161,34 @@ nav {
 }
 
 #why-use {
+  padding: 10rem 0;
   clip-path: polygon(0% 14%, 100% 0, 100% 84%, 0 100%);
-  background: linear-gradient(
-    90deg,
-    rgba(28, 216, 210, 0.62),
-        $primary-color
-  );
+  background: linear-gradient(90deg, rgba(28, 216, 210, 0.62), $primary-color);
   min-height: calc(100vh - 56px);
   height: 100%;
   #why-use-content {
     position: relative;
-    height: 100vh;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
     .container {
       height: 100%;
       .row {
         height: 100%;
         display: flex;
         align-items: center;
-        #carousel-container{
-          @media (max-width: $breakpoint-large) {
-            display: none;
-            visibility: hidden;
-          }
-        }
         #carousel2 {
           overflow: hidden;
-          width:80%;
-          margin:0 auto;
+          width: 60%;
+          margin: 0 auto;
           box-shadow: 5px 5px 20px black;
-          
+
           img {
             max-width: 100%;
             margin: 0 auto;
           }
         }
-        
+
         h1 {
           font-weight: bolder;
           text-shadow: 1px 1px $secondary-color;
@@ -189,28 +212,31 @@ nav {
 }
 
 footer {
-  padding:1rem 0;
-  height:100%;
-  background:linear-gradient(
-    90deg,
-    rgba(28, 216, 210, 0.62),
-        $primary-color
-  );
-  display:flex;
+  padding: 1rem 0;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(28, 216, 210, 0.62), $primary-color);
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  ;
-  .soc-media{
-    padding:1rem 0;
-    display:flex;
+  .soc-media {
+    padding: 1rem 0;
+    display: flex;
     justify-content: space-evenly;
-    i {
-      color:$white;
-      font-size:2rem;
+    .fa-instagram, .fa-facebook {
+      color: $white;
+      font-size: 2rem;
+    }
+    .fa-instagram{
+      &:hover{background: -webkit-linear-gradient(#feda75, 	#d62976);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;;}
+    }
+    .fa-facebook{
+      &:hover{color:#3B5998;}
     }
   }
-  p{
+  p {
     font-size: 0.7rem;
     font-weight: thin;
   }
