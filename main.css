@@ -23,7 +23,6 @@ nav {
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 84%, 0 100%);
   clip-path: polygon(0 0, 100% 0, 100% 84%, 0 100%);
   color: #fffffa;
-  text-shadow: 1px 1px #eb4a4a;
   min-height: calc(100vh - 56px);
   height: 100%;
   display: flex;
@@ -44,10 +43,12 @@ nav {
       #hero #hero-content #hero-text h1 {
         font-size: 56px;
         font-weight: bolder;
-        padding: 2rem 0; }
+        padding: 2rem 0;
+        text-shadow: 1px 1px #eb4a4a; }
+      #hero #hero-content #hero-text p {
+        font-weight: bolder; }
       #hero #hero-content #hero-text .response {
         padding: 0 1rem;
-        text-shadow: none;
         text-transform: uppercase;
         text-align: center; }
         #hero #hero-content #hero-text .response a {
@@ -67,6 +68,9 @@ nav {
         box-shadow: 1px 1px 3px black;
         font-weight: bolder;
         border-radius: 0; }
+        #hero #hero-content #hero-text button:hover, #hero #hero-content #hero-text button:active {
+          background-color: #fffffa;
+          color: #eb4a4a; }
       #hero #hero-content #hero-text input {
         border: none;
         box-shadow: 1px 1px 3px black;
@@ -209,5 +213,20 @@ footer {
   footer p {
     font-size: 0.7rem;
     font-weight: thin; }
+
+#backToTop {
+  display: flex;
+  justify-content: center;
+  padding: 2rem 0; }
+  #backToTop button {
+    background-color: #eb4a4a;
+    color: #fffffa;
+    border: 1px solid #eb4a4a;
+    box-shadow: 1px 1px 3px black;
+    font-weight: bolder;
+    border-radius: 0; }
+    #backToTop button:hover, #backToTop button:active {
+      background-color: #fffffa;
+      color: #eb4a4a; }
 
 /*# sourceMappingURL=main.css.map */

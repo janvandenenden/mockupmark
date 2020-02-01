@@ -37,7 +37,6 @@ nav {
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 84%, 0 100%);
   clip-path: polygon(0 0, 100% 0, 100% 84%, 0 100%);
   color: $white;
-  text-shadow: 1px 1px $secondary-color;
   min-height: calc(100vh - 56px);
   height: 100%;
   display: flex;
@@ -60,10 +59,13 @@ nav {
         font-size: 56px;
         font-weight: bolder;
         padding: 2rem 0;
+        text-shadow: 1px 1px $secondary-color;
+      }
+      p{
+        font-weight: bolder;
       }
       .response {
         padding:0 1rem;
-        text-shadow: none;
         text-transform: uppercase;
         text-align: center;
         a{
@@ -88,6 +90,12 @@ nav {
         box-shadow: 1px 1px 3px black;
         font-weight: bolder;
         border-radius: 0;
+        &:hover, &:active{
+          background-color: $white;
+          color:$secondary-color;
+
+        }
+
       }
       input {
         border: none;
@@ -251,4 +259,22 @@ footer {
     font-size: 0.7rem;
     font-weight: thin;
   }
+}
+
+#backToTop{
+  display:flex;
+  justify-content: center;
+  padding:2rem 0;
+  button {background-color: $secondary-color;
+        color: $white;
+        border: 1px solid $secondary-color;
+        box-shadow: 1px 1px 3px black;
+        font-weight: bolder;
+        border-radius: 0;
+        &:hover, &:active{
+          background-color: $white;
+          color:$secondary-color;
+
+        }
+      }
 }
