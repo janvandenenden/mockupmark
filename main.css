@@ -47,6 +47,9 @@ nav {
         text-shadow: 1px 1px #eb4a4a; }
       #hero #hero-content #hero-text p {
         font-weight: bolder; }
+      #hero #hero-content #hero-text form {
+        margin: 0;
+        padding: 0; }
       #hero #hero-content #hero-text .response {
         padding: 0 1rem;
         text-transform: uppercase;
@@ -62,6 +65,7 @@ nav {
         color: #000103; }
       #hero #hero-content #hero-text button {
         width: 100%;
+        margin: 0 !important;
         background-color: #eb4a4a;
         color: #fffffa;
         border: 1px solid #eb4a4a;
@@ -100,7 +104,7 @@ nav {
 
 #how-to,
 #everything-you-need {
-  margin: 4rem 0;
+  margin-top: 4rem;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -226,6 +230,30 @@ footer {
     font-weight: bolder;
     border-radius: 0; }
     #backToTop button:hover, #backToTop button:active {
+      background-color: #fffffa;
+      color: #eb4a4a; }
+
+#thankyou {
+  background: linear-gradient(90deg, rgba(28, 216, 210, 0.62), #93edc7);
+  display: flex;
+  min-height: 100vh;
+  height: 100%;
+  align-items: center;
+  text-align: center; }
+  #thankyou h1 {
+    color: #fffffa;
+    font-size: 56px;
+    font-weight: bolder;
+    padding: 2rem 0;
+    text-shadow: 1px 1px #eb4a4a; }
+  #thankyou button {
+    background-color: #eb4a4a;
+    color: #fffffa;
+    border: 1px solid #eb4a4a;
+    box-shadow: 1px 1px 3px black;
+    font-weight: bolder;
+    border-radius: 0; }
+    #thankyou button:hover, #thankyou button:active {
       background-color: #fffffa;
       color: #eb4a4a; }
 
