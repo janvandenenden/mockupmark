@@ -1,8 +1,8 @@
-$primary-color: rgb(147, 237, 199);
+$primary-color: #01a4a4;
 $secondary-color: rgb(235, 74, 74);
 $white: #fffffa;
 $black: #000103;
-$primary-font: arial;
+$primary-font: 'Bebas Neue';
 $secondary-font: serif;
 
 $breakpoint-small: 576px;
@@ -12,6 +12,10 @@ $breakpoint-x-large: 1200px;
 
 body {
   background-color: $white;
+  h1{
+    font-family: $primary-font;
+    letter-spacing: 0.2rem;
+  }
 }
 
 nav {
@@ -21,6 +25,9 @@ nav {
   }
   a {
     color: #000;
+    img{
+      height:1.3rem;
+    }
   }
 }
 .navbar {

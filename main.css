@@ -1,5 +1,8 @@
 body {
   background-color: #fffffa; }
+  body h1 {
+    font-family: "Bebas Neue";
+    letter-spacing: 0.2rem; }
 
 nav {
   background-color: #fffffa; }
@@ -8,6 +11,8 @@ nav {
       flex-direction: column; } }
   nav a {
     color: #000; }
+    nav a img {
+      height: 1.3rem; }
 
 .navbar {
   transition: top 0.3s; }
@@ -19,7 +24,7 @@ nav {
     color: transparent; }
 
 #hero {
-  background: linear-gradient(90deg, rgba(28, 216, 210, 0.62), #93edc7);
+  background: linear-gradient(90deg, rgba(28, 216, 210, 0.62), #01a4a4);
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 84%, 0 100%);
   clip-path: polygon(0 0, 100% 0, 100% 84%, 0 100%);
   color: #fffffa;
@@ -131,7 +136,7 @@ nav {
     #everything-you-need #everything-you-need-content .card {
       margin: 32px 0;
       padding: 2rem 0;
-      border: 3px solid #93edc7;
+      border: 3px solid #01a4a4;
       color: black;
       border-radius: 0; }
       #how-to #how-to-content .card img,
@@ -149,7 +154,7 @@ nav {
   padding: 10rem 0;
   -webkit-clip-path: polygon(0% 14%, 100% 0, 100% 84%, 0 100%);
   clip-path: polygon(0% 14%, 100% 0, 100% 84%, 0 100%);
-  background: linear-gradient(90deg, rgba(28, 216, 210, 0.62), #93edc7);
+  background: linear-gradient(90deg, rgba(28, 216, 210, 0.62), #01a4a4);
   min-height: calc(100vh - 56px);
   height: 100%; }
   #why-use #why-use-content {
@@ -196,7 +201,7 @@ nav {
 footer {
   padding: 1rem 0;
   height: 100%;
-  background: linear-gradient(90deg, rgba(28, 216, 210, 0.62), #93edc7);
+  background: linear-gradient(90deg, rgba(28, 216, 210, 0.62), #01a4a4);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -234,7 +239,7 @@ footer {
       color: #eb4a4a; }
 
 #thankyou {
-  background: linear-gradient(90deg, rgba(28, 216, 210, 0.62), #93edc7);
+  background: linear-gradient(90deg, rgba(28, 216, 210, 0.62), #01a4a4);
   display: flex;
   min-height: 100vh;
   height: 100%;
