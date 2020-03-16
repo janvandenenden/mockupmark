@@ -12,7 +12,7 @@
     <meta property="og:title"              content="Mockup Mark - the mock up generator" />
     <meta property="og:description"        content="high quality marketing materials for your print on demand store" />
     <meta property="og:image"              content="https://mockupmark.com/img/hero2.png" />
-    <link href="https://fonts.googleapis.com/css?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css?family=Bebas+Neue&display=swap" rel="stylesheet"> -->
     <link rel="icon" 
       type="image/png" 
       href="./img/fav.png">
@@ -339,7 +339,18 @@
     ></script>
     <script src="https://kit.fontawesome.com/c88f61d252.js" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
+    <script type="text/javascript">
+  WebFontConfig = {
+    google: { families: [ 'Bebas Neue' ] }
+  };
+  (function() {
+    var wf = document.createElement('script');
+    wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+    wf.type = 'text/javascript';
+    wf.async = 'true';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(wf, s);
+  })(); </script>
     <script>
       AOS.init()
     </script>
