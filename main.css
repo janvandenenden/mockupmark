@@ -83,7 +83,7 @@ nav {
       #hero #hero-content #hero-text input {
         border: none;
         box-shadow: 1px 1px 3px black;
-        color: black;
+        color: darkgray;
         font-weight: thin;
         border-radius: 0;
         background-color: #fffffa; }
@@ -170,33 +170,30 @@ nav {
         align-items: center; }
         #why-use #why-use-content .container .row #carousel2 {
           overflow: hidden;
-          width: 60%;
+          width: 80%;
+          max-width: 400px;
           margin: 0 auto;
           box-shadow: 5px 5px 20px black; }
           #why-use #why-use-content .container .row #carousel2 img {
             max-width: 100%;
             margin: 0 auto; }
-        #why-use #why-use-content .container .row #carousel-info {
-          min-height: 320px; }
-          #why-use #why-use-content .container .row #carousel-info .info-item {
-            display: flex; }
-          #why-use #why-use-content .container .row #carousel-info h1 {
-            font-weight: bolder;
-            text-shadow: 1px 1px #eb4a4a;
-            text-align: center;
-            padding: 2rem 0;
-            color: #fffffa;
-            margin: 0; }
-            @media (max-width: 768px) {
-              #why-use #why-use-content .container .row #carousel-info h1 {
-                font-size: 2rem; } }
-          #why-use #why-use-content .container .row #carousel-info p {
-            color: #fffffa;
-            margin: 0;
-            text-align: center; }
-            @media (max-width: 768px) {
-              #why-use #why-use-content .container .row #carousel-info p {
-                font-size: 1rem; } }
+        #why-use #why-use-content .container .row h1 {
+          font-weight: bolder;
+          text-shadow: 1px 1px #eb4a4a;
+          text-align: center;
+          padding: 2rem 0;
+          color: #fffffa;
+          margin: 0; }
+          @media (max-width: 768px) {
+            #why-use #why-use-content .container .row h1 {
+              font-size: 2rem; } }
+        #why-use #why-use-content .container .row p {
+          color: #fffffa;
+          margin: 0;
+          text-align: center; }
+          @media (max-width: 768px) {
+            #why-use #why-use-content .container .row p {
+              font-size: 1rem; } }
 
 footer {
   padding: 1rem 0;
@@ -210,7 +207,8 @@ footer {
     padding: 1rem 0;
     display: flex;
     justify-content: space-evenly; }
-    footer .soc-media .fa-instagram, footer .soc-media .fa-facebook {
+    footer .soc-media .fa-instagram,
+    footer .soc-media .fa-facebook {
       color: #fffffa;
       font-size: 2rem; }
     footer .soc-media .fa-instagram:hover {
@@ -218,7 +216,7 @@ footer {
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent; }
     footer .soc-media .fa-facebook:hover {
-      color: #3B5998; }
+      color: #3b5998; }
   footer p {
     font-size: 0.7rem;
     font-weight: thin; }
