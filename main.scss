@@ -2,7 +2,7 @@ $primary-color: #01a4a4;
 $secondary-color: rgb(235, 74, 74);
 $white: #fffffa;
 $black: #000103;
-$primary-font: 'Bebas Neue';
+$primary-font: "Bebas Neue";
 $secondary-font: serif;
 
 $breakpoint-small: 576px;
@@ -12,7 +12,7 @@ $breakpoint-x-large: 1200px;
 
 body {
   background-color: $white;
-  h1{
+  h1 {
     font-family: $primary-font;
     letter-spacing: 0.2rem;
   }
@@ -25,8 +25,8 @@ nav {
   }
   a {
     color: #000;
-    img{
-      height:1.3rem;
+    img {
+      height: 1.3rem;
     }
   }
 }
@@ -68,46 +68,45 @@ nav {
         padding: 2rem 0;
         text-shadow: 1px 1px $secondary-color;
       }
-      p{
+      p {
         font-weight: bolder;
       }
-      form{
-        margin:0;
-        padding:0;
+      form {
+        margin: 0;
+        padding: 0;
       }
       .response {
-        padding:0 1rem;
+        padding: 0 1rem;
         text-transform: uppercase;
         text-align: center;
-        a{
-          color:$secondary-color;
+        a {
+          color: $secondary-color;
           text-transform: uppercase;
         }
       }
       #mce-error-response {
-        color:$secondary-color;
+        color: $secondary-color;
         a {
-          color:$secondary-color;
+          color: $secondary-color;
         }
       }
       #mce-success-response {
-        color:$black;
+        color: $black;
       }
       button {
         width: 100%;
-        margin:0 !important;
+        margin: 0 !important;
         background-color: $secondary-color;
         color: $white;
         border: 1px solid $secondary-color;
         box-shadow: 1px 1px 3px black;
         font-weight: bolder;
         border-radius: 0;
-        &:hover, &:active{
+        &:hover,
+        &:active {
           background-color: $white;
-          color:$secondary-color;
-
+          color: $secondary-color;
         }
-
       }
       input {
         border: none;
@@ -183,7 +182,7 @@ nav {
 
 #why-use {
   padding: 10rem 0;
-  -webkit-clip-path:polygon(0% 14%, 100% 0, 100% 84%, 0 100%);
+  -webkit-clip-path: polygon(0% 14%, 100% 0, 100% 84%, 0 100%);
   clip-path: polygon(0% 14%, 100% 0, 100% 84%, 0 100%);
   background: linear-gradient(90deg, rgba(28, 216, 210, 0.62), $primary-color);
   min-height: calc(100vh - 56px);
@@ -201,7 +200,8 @@ nav {
         align-items: center;
         #carousel2 {
           overflow: hidden;
-          width: 60%;
+          width: 80%;
+          max-width: 400px;
           margin: 0 auto;
           box-shadow: 5px 5px 20px black;
 
@@ -210,33 +210,25 @@ nav {
             margin: 0 auto;
           }
         }
-        #carousel-info{
-          min-height: 320px;
-          .info-item{
-            display: flex;
+        h1 {
+          font-weight: bolder;
+          text-shadow: 1px 1px $secondary-color;
+          text-align: center;
+          padding: 2rem 0;
+          color: $white;
+          margin: 0;
+          @media (max-width: $breakpoint-medium) {
+            font-size: 2rem;
           }
-          h1 {
-            font-weight: bolder;
-            text-shadow: 1px 1px $secondary-color;
-            text-align: center;
-            padding: 2rem 0;
-            color: $white;
-            margin:0;
-            @media (max-width: $breakpoint-medium) {
-              font-size: 2rem;
-            }
-          }
-          p {
-            color: $white;
-            margin:0;
-            text-align: center;
-            @media (max-width: $breakpoint-medium) {
-              font-size: 1rem;
-            }
-          }
-
         }
-        
+        p {
+          color: $white;
+          margin: 0;
+          text-align: center;
+          @media (max-width: $breakpoint-medium) {
+            font-size: 1rem;
+          }
+        }
       }
     }
   }
@@ -254,17 +246,22 @@ footer {
     padding: 1rem 0;
     display: flex;
     justify-content: space-evenly;
-    .fa-instagram, .fa-facebook {
+    .fa-instagram,
+    .fa-facebook {
       color: $white;
       font-size: 2rem;
     }
-    .fa-instagram{
-      &:hover{background: -webkit-linear-gradient(#feda75, 	#d62976);
+    .fa-instagram {
+      &:hover {
+        background: -webkit-linear-gradient(#feda75, #d62976);
         -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;;}
+        -webkit-text-fill-color: transparent;
+      }
     }
-    .fa-facebook{
-      &:hover{color:#3B5998;}
+    .fa-facebook {
+      &:hover {
+        color: #3b5998;
+      }
     }
   }
   p {
@@ -273,48 +270,50 @@ footer {
   }
 }
 
-#backToTop{
-  display:flex;
-  justify-content: center;
-  padding:2rem 0;
-  button {background-color: $secondary-color;
-        color: $white;
-        border: 1px solid $secondary-color;
-        box-shadow: 1px 1px 3px black;
-        font-weight: bolder;
-        border-radius: 0;
-        &:hover, &:active{
-          background-color: $white;
-          color:$secondary-color;
-
-        }
-      }
-}
-
-#thankyou{
-  background: linear-gradient(90deg, rgba(28, 216, 210, 0.62), $primary-color);
+#backToTop {
   display: flex;
-  min-height:100vh;
-  height:100%;
-  align-items: center;
-  text-align: center;
-  h1{
-    color:$white;
-    font-size: 56px;
-    font-weight: bolder;
-    padding: 2rem 0;
-    text-shadow: 1px 1px $secondary-color;
-  }
-  button {background-color: $secondary-color;
+  justify-content: center;
+  padding: 2rem 0;
+  button {
+    background-color: $secondary-color;
     color: $white;
     border: 1px solid $secondary-color;
     box-shadow: 1px 1px 3px black;
     font-weight: bolder;
     border-radius: 0;
-    &:hover, &:active{
+    &:hover,
+    &:active {
       background-color: $white;
-      color:$secondary-color;
+      color: $secondary-color;
+    }
+  }
+}
 
+#thankyou {
+  background: linear-gradient(90deg, rgba(28, 216, 210, 0.62), $primary-color);
+  display: flex;
+  min-height: 100vh;
+  height: 100%;
+  align-items: center;
+  text-align: center;
+  h1 {
+    color: $white;
+    font-size: 56px;
+    font-weight: bolder;
+    padding: 2rem 0;
+    text-shadow: 1px 1px $secondary-color;
+  }
+  button {
+    background-color: $secondary-color;
+    color: $white;
+    border: 1px solid $secondary-color;
+    box-shadow: 1px 1px 3px black;
+    font-weight: bolder;
+    border-radius: 0;
+    &:hover,
+    &:active {
+      background-color: $white;
+      color: $secondary-color;
     }
   }
 }
