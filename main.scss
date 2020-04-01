@@ -12,7 +12,8 @@ $breakpoint-x-large: 1200px;
 
 body {
   background-color: $white;
-  h1 {
+  h1,
+  h2 {
     font-family: $primary-font;
     letter-spacing: 0.2rem;
   }
@@ -68,56 +69,34 @@ nav {
         padding: 2rem 0;
         text-shadow: 1px 1px $secondary-color;
       }
-      p {
-        font-weight: bolder;
-      }
-      form {
-        margin: 0;
-        padding: 0;
-      }
-      .response {
-        padding: 0 1rem;
-        text-transform: uppercase;
-        text-align: center;
+
+      #call-to-action {
+        font-size: 36px;
         a {
-          color: $secondary-color;
-          text-transform: uppercase;
-        }
-      }
-      #mce-error-response {
-        color: $secondary-color;
-        a {
-          color: $secondary-color;
-        }
-      }
-      #mce-success-response {
-        color: $black;
-      }
-      button {
-        width: 100%;
-        margin: 0 !important;
-        background-color: $secondary-color;
-        color: $white;
-        border: 1px solid $secondary-color;
-        box-shadow: 1px 1px 3px black;
-        font-weight: bolder;
-        border-radius: 0;
-        &:hover,
-        &:active {
-          background-color: $white;
-          color: $secondary-color;
-        }
-      }
-      input {
-        border: none;
-        box-shadow: 1px 1px 3px black;
-        color: darkgray;
-        font-weight: thin;
-        border-radius: 0;
-        background-color: $white;
-        &::placeholder {
-          font-weight: thin;
-          color: darkgray;
+          display: inline-block;
+          padding: 0.5em 1em 0.3em;
+          background-color: #111;
+          color: white;
+          // border-radius: 5px;
+          text-decoration: none;
+          font-family: $primary-font;
+          &:hover,
+          &:active,
+          &:focus {
+            background-color: white;
+            color: $primary-color;
+          }
+
+          box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.5);
+          margin-top: 0px;
+          margin-bottom: 3px;
+
+          transition: 0.1s all;
+          &:active {
+            margin-top: 3px;
+            margin-bottom: 0px;
+            box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.5);
+          }
         }
       }
     }
@@ -157,7 +136,7 @@ nav {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    h1 {
+    h2 {
       font-size: 56px;
       font-weight: bolder;
       padding: 2rem 0;
@@ -210,7 +189,7 @@ nav {
             margin: 0 auto;
           }
         }
-        h1 {
+        h2 {
           font-weight: bolder;
           text-shadow: 1px 1px $secondary-color;
           text-align: center;
@@ -270,15 +249,14 @@ footer {
   }
 }
 
-#backToTop {
-  display: flex;
-  justify-content: center;
+#register {
   padding: 2rem 0;
+  text-align: center;
   button {
+    margin-left: 10px;
     background-color: $secondary-color;
     color: $white;
     border: 1px solid $secondary-color;
-    box-shadow: 1px 1px 3px black;
     font-weight: bolder;
     border-radius: 0;
     &:hover,
@@ -296,7 +274,7 @@ footer {
   height: 100%;
   align-items: center;
   text-align: center;
-  h1 {
+  h2 {
     color: $white;
     font-size: 56px;
     font-weight: bolder;
@@ -307,7 +285,6 @@ footer {
     background-color: $secondary-color;
     color: $white;
     border: 1px solid $secondary-color;
-    box-shadow: 1px 1px 3px black;
     font-weight: bolder;
     border-radius: 0;
     &:hover,
@@ -315,5 +292,57 @@ footer {
       background-color: $white;
       color: $secondary-color;
     }
+  }
+}
+
+form {
+  margin: 0 !important;
+  padding: 0 !important;
+  .form-row {
+    justify-content: center;
+  }
+}
+.response {
+  padding: 0 1rem;
+  text-transform: uppercase;
+  text-align: center;
+  a {
+    color: $secondary-color;
+    text-transform: uppercase;
+  }
+}
+#mce-error-response {
+  color: $secondary-color;
+  a {
+    color: $secondary-color;
+  }
+}
+#mce-success-response {
+  color: $black;
+}
+button {
+  width: 100%;
+  background-color: $secondary-color;
+  color: $white;
+  border: 1px solid $secondary-color;
+  font-weight: bolder;
+  border-radius: 0;
+  &:hover,
+  &:active {
+    background-color: $white;
+    color: $secondary-color;
+  }
+}
+input {
+  border: none;
+  color: darkgray;
+  font-weight: thin;
+  border-radius: 0;
+  background-color: $white;
+  min-width: 400px;
+  max-width: 100%;
+  &::placeholder {
+    font-weight: thin;
+    color: darkgray;
   }
 }
