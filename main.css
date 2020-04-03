@@ -241,7 +241,8 @@ footer {
 
 form {
   margin: 0 !important;
-  padding: 0 !important; }
+  padding: 0 !important;
+  overflow: hidden; }
   form .form-row {
     justify-content: center; }
 
@@ -278,7 +279,7 @@ input {
   font-weight: thin;
   border-radius: 0;
   background-color: #fffffa;
-  min-width: 400px;
+  min-width: 300px;
   max-width: 100%; }
   input::placeholder {
     font-weight: thin;
