@@ -35,6 +35,10 @@ nav {
   flex-direction: column;
   justify-content: center;
   margin-bottom: 0px; }
+  @media (max-width: 576px) {
+    #hero {
+      -webkit-clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100%);
+      clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100%); } }
   #hero #hero-content {
     height: 100%;
     align-items: center; }
@@ -139,6 +143,10 @@ nav {
   background: linear-gradient(90deg, rgba(28, 216, 210, 0.62), #01a4a4);
   min-height: calc(100vh - 56px);
   height: 100%; }
+  @media (max-width: 576px) {
+    #why-use {
+      -webkit-clip-path: polygon(0% 5%, 100% 0, 100% 95%, 0 100%);
+      clip-path: polygon(0% 5%, 100% 0, 100% 95%, 0 100%); } }
   #why-use #why-use-content {
     position: relative;
     min-height: 100vh;

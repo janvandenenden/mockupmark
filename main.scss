@@ -44,6 +44,10 @@ nav {
   background: linear-gradient(90deg, rgba(28, 216, 210, 0.62), $primary-color);
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 84%, 0 100%);
   clip-path: polygon(0 0, 100% 0, 100% 84%, 0 100%);
+  @media (max-width: $breakpoint-small) {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100%);
+  }
   color: $white;
   min-height: calc(100vh - 56px);
   height: 100%;
@@ -164,6 +168,10 @@ nav {
   padding: 10rem 0;
   -webkit-clip-path: polygon(0% 14%, 100% 0, 100% 84%, 0 100%);
   clip-path: polygon(0% 14%, 100% 0, 100% 84%, 0 100%);
+  @media (max-width: $breakpoint-small) {
+    -webkit-clip-path: polygon(0% 5%, 100% 0, 100% 95%, 0 100%);
+    clip-path: polygon(0% 5%, 100% 0, 100% 95%, 0 100%);
+  }
   background: linear-gradient(90deg, rgba(28, 216, 210, 0.62), $primary-color);
   min-height: calc(100vh - 56px);
   height: 100%;
