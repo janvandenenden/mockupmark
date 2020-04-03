@@ -3,7 +3,7 @@ body {
   body h1,
   body h2 {
     font-family: "Bebas Neue";
-    letter-spacing: 0.2rem; }
+    letter-spacing: 0.05em; }
 
 nav {
   background-color: #fffffa; }
@@ -35,6 +35,10 @@ nav {
   flex-direction: column;
   justify-content: center;
   margin-bottom: 0px; }
+  @media (max-width: 576px) {
+    #hero {
+      -webkit-clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100%);
+      clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100%); } }
   #hero #hero-content {
     height: 100%;
     align-items: center; }
@@ -60,6 +64,7 @@ nav {
           color: white;
           text-decoration: none;
           font-family: "Bebas Neue";
+          letter-spacing: 0.05em;
           box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.5);
           margin-top: 0px;
           margin-bottom: 3px;
@@ -138,6 +143,10 @@ nav {
   background: linear-gradient(90deg, rgba(28, 216, 210, 0.62), #01a4a4);
   min-height: calc(100vh - 56px);
   height: 100%; }
+  @media (max-width: 576px) {
+    #why-use {
+      -webkit-clip-path: polygon(0% 5%, 100% 0, 100% 95%, 0 100%);
+      clip-path: polygon(0% 5%, 100% 0, 100% 95%, 0 100%); } }
   #why-use #why-use-content {
     position: relative;
     min-height: 100vh;
@@ -178,6 +187,7 @@ nav {
 
 footer {
   padding: 1rem 0;
+  margin-top: 2rem;
   height: 100%;
   background: linear-gradient(90deg, rgba(28, 216, 210, 0.62), #01a4a4);
   display: flex;
@@ -203,7 +213,6 @@ footer {
     font-weight: thin; }
 
 #register {
-  padding: 2rem 0;
   text-align: center; }
   #register button {
     margin-left: 10px;
@@ -241,7 +250,8 @@ footer {
 
 form {
   margin: 0 !important;
-  padding: 0 !important; }
+  padding: 0 !important;
+  overflow: hidden; }
   form .form-row {
     justify-content: center; }
 
@@ -278,7 +288,7 @@ input {
   font-weight: thin;
   border-radius: 0;
   background-color: #fffffa;
-  min-width: 400px;
+  min-width: 300px;
   max-width: 100%; }
   input::placeholder {
     font-weight: thin;
