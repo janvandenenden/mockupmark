@@ -48,6 +48,12 @@
       gtag("js", new Date());
       gtag("config", "UA-157117041-1");
     </script>
+    <script>
+      const list = ["localhost", "127.0.0.1"];
+      if (list.includes(window.location.hostname)) {
+        window.fbq = function () {};
+      }
+    </script>
     <!-- Facebook Pixel Code -->
     <script>
       !(function (f, b, e, v, n, t, s) {
