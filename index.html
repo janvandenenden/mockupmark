@@ -50,11 +50,9 @@
     </script>
     <script>
       var captureOutboundLink = function (url) {
-        ga("send", "event", "outbound", "click", url, {
-          transport: "beacon",
-          hitCallback: function () {
-            document.location = url;
-          },
+        gtag("event", "outbound", {
+          event_category: "click",
+          event_label: url,
         });
       };
     </script>
