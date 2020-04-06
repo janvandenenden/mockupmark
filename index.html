@@ -49,6 +49,16 @@
       gtag("config", "UA-157117041-1");
     </script>
     <script>
+      var captureOutboundLink = function (url) {
+        ga("send", "event", "outbound", "click", url, {
+          transport: "beacon",
+          hitCallback: function () {
+            document.location = url;
+          },
+        });
+      };
+    </script>
+    <script>
       const list = ["localhost", "127.0.0.1"];
       if (list.includes(window.location.hostname)) {
         window.fbq = function () {};
@@ -105,7 +115,10 @@
             on demand store
           </h1>
           <div id="call-to-action">
-            <a href="https://create.mockupmark.com">
+            <a
+              href="https://create.mockupmark.com"
+              onclick="captureOutboundLink('https://create.mockupmark.com')"
+            >
               Try our mockup generator now
             </a>
           </div>
