@@ -55,27 +55,6 @@ nav {
         font-weight: bolder;
         padding: 2rem 0;
         text-shadow: 1px 1px #eb4a4a; }
-      #hero #hero-content #hero-text #call-to-action {
-        font-size: 36px; }
-        #hero #hero-content #hero-text #call-to-action a {
-          display: inline-block;
-          padding: 0.5em 1em 0.3em;
-          background-color: #111;
-          color: white;
-          text-decoration: none;
-          font-family: "Bebas Neue";
-          letter-spacing: 0.05em;
-          box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.5);
-          margin-top: 0px;
-          margin-bottom: 3px;
-          transition: 0.1s all; }
-          #hero #hero-content #hero-text #call-to-action a:hover, #hero #hero-content #hero-text #call-to-action a:active, #hero #hero-content #hero-text #call-to-action a:focus {
-            background-color: white;
-            color: #01a4a4; }
-          #hero #hero-content #hero-text #call-to-action a:active {
-            margin-top: 3px;
-            margin-bottom: 0px;
-            box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.5); }
     #hero #hero-content #hero-image {
       height: 30rem;
       padding: 0;
@@ -322,8 +301,36 @@ input {
   -webkit-animation-duration: 1s;
   animation-duration: 1s;
   -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
+  animation-fill-mode: both; }
+
+.infinite {
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite; }
+
+.five-times {
   -webkit-animation-iteration-count: 5;
   animation-iteration-count: 5; }
+
+.call-to-action {
+  font-size: 36px; }
+  .call-to-action a {
+    display: inline-block;
+    padding: 0.5em 1em 0.3em;
+    background-color: #111;
+    color: white;
+    text-decoration: none;
+    font-family: "Bebas Neue";
+    letter-spacing: 0.05em;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.5);
+    margin-top: 0px;
+    margin-bottom: 3px;
+    transition: 0.1s all; }
+    .call-to-action a:hover, .call-to-action a:active, .call-to-action a:focus {
+      background-color: white;
+      color: #01a4a4; }
+    .call-to-action a:active {
+      margin-top: 3px;
+      margin-bottom: 0px;
+      box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.5); }
 
 /*# sourceMappingURL=main.css.map */
